@@ -33,7 +33,7 @@ view = {
                    cross.className = "item-delete";
 
                    span.textContent = model.items[i].text;
-                   if(model.items.completed){
+                   if(model.items[i].completed){
                    span.setAttribute("style", "text-decoration: line-through; color:#bbb;");
                    }
                    iconCheck.setAttribute("class", "icon ion-md-checkmark");
@@ -89,7 +89,7 @@ controller = {
     },
 
     deleteItem : function(item_index){
-        model.items.splice(item_index)
+        model.items.splice(item_index,1)
          view.render()
     }
 
