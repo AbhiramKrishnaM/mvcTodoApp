@@ -34,7 +34,7 @@ view = {
 
                    span.textContent = model.items[i].text;
                    if(model.items[i].completed){
-                   span.setAttribute("style", "text-decoration: line-through; color:#bbb;");
+                   span.setAttribute("style", "text-decoration: line-through; color:black;");
                    }
                    iconCheck.setAttribute("class", "icon ion-md-checkmark");
                    iconCheck.setAttribute("data-id", i)
