@@ -96,4 +96,7 @@ controller = {
 
 }
 
+controller.addItem("Clean the bedroom");
+controller.addItem("Code for 1 hour");
+controller.addItem("Learn stuff form college");
 controller.init();

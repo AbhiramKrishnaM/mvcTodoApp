@@ -38,4 +38,18 @@ input {
   outline: none;
   width: 50%;
 }
+
+#list {
+  margin: 20px 0px;
+}
+
+#list li.item {
+  margin: 10px 0px;
+}
+
+li.item check,
+cross {
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 1rem;
+}
 /*# sourceMappingURL=style.css.map */
