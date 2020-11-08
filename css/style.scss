@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  min-height: 50vh;
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+
+h1 {
+  padding: 1rem;
+}
+
+input {
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 0.5rem;
+  outline: none;
+  width: 50%;
+}
