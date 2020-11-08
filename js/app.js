@@ -55,16 +55,6 @@ view = {
                }
            }
 
-    },
-
-    addItem : function(e){
-     if ((e.code == "Enter") || (e.code == "NumpadEnter")){
-        input = document.getElementById("add-item");
-        if ((input.value != "") || (input.value != " ")){
-            controller.addItem(input.value);
-            return false;
-        }
-     }
     }
 }
 
@@ -76,11 +66,18 @@ controller = {
         view.render()
     },
 
-    addItem : function(item){
-        listItem = {text : item, completed:false};
-        model.items.push(listItem);
-        document .getElementById("add-item").value="";
-        view.render();
+    addItem : function(event){
+        if ((event.code == "Enter") || (event.code == "NumpadEnter")){
+            input = document.getElementById("add-item");
+            if ((input.value != "") || (input.value != " ")){
+                
+                listItem = {text : input.value, completed:false};
+                model.items.push(listItem);
+                document .getElementById("add-item").value="";
+                
+            }
+         }
+         view.render();
     },
 
     completeItem : function(item_index){
@@ -96,7 +93,5 @@ controller = {
 
 }
 
-controller.addItem("Clean the bedroom");
-controller.addItem("Code for 1 hour");
-controller.addItem("Learn stuff form college");
+
 controller.init();
